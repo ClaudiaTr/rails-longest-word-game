@@ -17,7 +17,9 @@ class GamesController < ApplicationController
     url = "https://wagon-dictionary.herokuapp.com/#{@attempt}"
     word = JSON.parse(URI.open(url).read)["found"]
     grid_test = @attempt.upcase.chars.all? { |letter| @attempt.upcase.count(letter) <= @grid.count(letter) }
-    if grid_test != true
+    if @attempt.length == 0
+      @result = "Please enter a word!"
+    elsif grid_test != true
       @result = "Sorry, but <strong>#{@attempt}</strong> can't be built out of #{@grid.join(", ")}"
     elsif word == false
       @result = "Sorry, but <strong>#{@attempt}</strong> does not seem to be a valid English word."
