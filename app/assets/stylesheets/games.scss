@@ -1,3 +1,79 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$color-white: rgb(255, 255, 255);
+$color-lightblue: rgb(194, 236, 255);
+
+body {
+  background-color: rgba(240, 247, 255, 0.5) !important;
+}
+
+h2, h3 {
+  background-color: $color-lightblue;
+  width: 100%;
+  padding: 25px;
+}
+
+.container {
+  padding: 0px !important;
+  margin-top: 25px;
+  box-shadow: 0px 1px 3px rgba(85, 85, 85, 0.2);
+  background-color: $color-white;
+  position: relative;
+}
+
+.box-content {
+  padding: 25px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  background-color: $color-lightblue;
+}
+
+#grid {
+  margin: 0px 0px 20px 0px;
+  padding: 20px;
+  background-color: black;
+  color: $color-white;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+#btn-home {
+  padding: 25px;
+  margin: 0px;
+  a {
+    color: rgb(0, 21, 71) !important;
+    font-weight: bold;
+  }
+}
+
+.btn-dark {
+  padding: 5px 20px;
+  max-width: 50%;
+  margin: 15px auto;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  a {
+    color: $color-white !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+
+p {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}

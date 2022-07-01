@@ -1,4 +1,9 @@
-<h1>Your results</h1>
-<p><%= @result.html_safe %></p>
-<p>Your score: <%= @score %></p>
-<%= link_to "Play again", new_path %>
+<div class="header">
+  <h2>Your results</h2>
+  <p id="btn-home"><%= link_to "Home", root_path %></p>
+</div>
+<div class="box-content">
+  <p><%= @result.html_safe %></p>
+  <p>Your score: <%= @score %></p>
+  <p class="btn-dark"><%= link_to "Play again", new_path %></p>
+</div>
